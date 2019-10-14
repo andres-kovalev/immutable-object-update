@@ -13,7 +13,7 @@ Simple and fast immutable update utility.
 
 # Description
 
-`immutable-object-update` provides simple utility for immutable object update (pretty helpful for reducers).
+`immutable-object-update` provides simple utilities for immutable object update (pretty helpful for reducers).
 
 # Installation
 
@@ -25,16 +25,19 @@ npm i -S immutable-object-update
 
 # API
 
-## update(object, path, value)
+There are several operations provided by this package:
 
-`update()` function consumes 3 arguments:
+* [set(object, path, value)](src/set/README.md)
 
-- object to update
-- path to be updated (array of items or dot-separated string can be provided)
-- value to set in specified path
+Most of operations consumes at least 2 arguments:
+
+- `object` to be updated
+- `path` to updated element
+
+The 2nd argument might be an array of items or dot-separated string.
 
 ```js
-import update from 'immutable-object-update';
+import { set } from 'immutable-object-update';
 
 const state = {
     a: {
@@ -47,11 +50,11 @@ const state = {
     }
 };
 
-const updated = update(state, [ 'b', 'b1' ], 5);
+const updated = set(state, [ 'b', 'b1' ], 5);
 
 // or
 
-const updated = update(state, 'b.b1', 5);
+const updated = set(state, 'b.b1', 5);
 ```
 
 As a result we will receive new object with structure below:
@@ -84,7 +87,7 @@ state.b.b2 === updated.b.b2 // false
 When using string as 2nd argument - dot will be considered as a delimiter (e.g. `a.b` means field `b` of field `a`). So, it's not possible to update keys which contains dots with string type path:
 
 ```js
-const updated = update({
+const updated = set({
     'a.b': 1,
     a: {
         b: 2
@@ -104,7 +107,7 @@ const updated = update({
 If you need to update such keys, use array type path instead:
 
 ```js
-const updated = update({
+const updated = set({
     'a.b': 1,
     a: {
         b: 2
@@ -121,10 +124,10 @@ const updated = update({
 */
 ```
 
-`update()` also ignores empty path (e.g. `a..b` equal to `a.b`) and will create intermediate fields by itself when needed:
+Utility also ignores empty path (e.g. `a..b` equal to `a.b`) and will create intermediate fields by itself when needed:
 
 ```js
-const updated = update({}, 'a.b', 10);
+const updated = set({}, 'a.b', 10);
 
 /*
 {
@@ -138,7 +141,7 @@ const updated = update({}, 'a.b', 10);
 It can even create new objects when no source object provided:
 
 ```js
-const updated = update(undefined, 'a.b', 10);
+const updated = set(undefined, 'a.b', 10);
 
 /*
 {
@@ -149,10 +152,10 @@ const updated = update(undefined, 'a.b', 10);
 */
 ```
 
-`update()` tries to predict type of created object. For instance, when path contains number, array will be created:
+It tries to predict type of created object. For instance, when path contains number, array will be created:
 
 ```js
-const updated = update({}, 'a.0', 1);
+const updated = set({}, 'a.0', 1);
 
 /*
 {
