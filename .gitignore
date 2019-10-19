@@ -4,4 +4,4 @@ coverage
 .eslintcache
 package-lock.json
 coverage.lcov
-docs
+.temp
