@@ -11,3 +11,4 @@ coverage
 .eslintrc
 package-lock.json
 coverage.lcov
+docs

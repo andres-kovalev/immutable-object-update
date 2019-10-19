@@ -11,6 +11,8 @@
 
 Simple and fast immutable update utility.
 
+* full documentation can be found on [https://andres-kovalev.github.io/immutable-object-update/](https://andres-kovalev.github.io/immutable-object-update/)
+
 # Description
 
 `immutable-object-update` provides simple utilities for immutable object update (pretty helpful for reducers).
