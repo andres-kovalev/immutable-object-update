@@ -4,8 +4,8 @@
     "description": "Simple and fast immutable update utility",
     "main": "index.js",
     "scripts": {
-        "lint": "eslint ./src ./tests --ext .js --cache --ignore-pattern .gitignore",
-        "lint:fix": "eslint ./src ./tests --ext .js --cache --ignore-pattern .gitignore --fix",
+        "lint": "eslint ./src ./tests ./tools --ext .js --cache --ignore-pattern .gitignore",
+        "lint:fix": "eslint ./src ./tests ./tools --ext .js --cache --ignore-pattern .gitignore --fix",
         "test": "mocha \"tests/**/*.spec.js\" --require ./tools/mocha.setup.js --recursive",
         "cover": "nyc --reporter=html --reporter=text npm test",
         "cover:check": "nyc check-coverage --lines 70 --functions 70 --branches 70 --statements 70 npm test",
