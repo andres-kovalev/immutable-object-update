@@ -43,7 +43,7 @@ jobs:
           command: 'sudo npm install -g npm@latest'
       - run:
           name: clean-up
-          command: npm run clean
+          command: npm run prepare:package
       - run:
           name: npm-auth
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ./.npmrc
