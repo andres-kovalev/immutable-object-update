@@ -1,6 +1,6 @@
-const update = require('../src/update');
+const set = require('../src/set');
 
-describe('update', () => {
+describe('set', () => {
     const source = {
         a: {
             a1: 1,
@@ -17,7 +17,7 @@ describe('update', () => {
         it('should update value', () => {
             const newValue = 6;
 
-            const result = update(source, [ 'b', 'b1' ], newValue);
+            const result = set(source, [ 'b', 'b1' ], newValue);
 
             expect(result.b.b1).to.be.equal(newValue);
         });
@@ -25,7 +25,7 @@ describe('update', () => {
         it('should update value not considering dots as delimiter', () => {
             const newValue = 6;
 
-            const result = update(source, [ 'b.b1' ], newValue);
+            const result = set(source, [ 'b.b1' ], newValue);
 
             expect(result['b.b1']).to.be.equal(newValue);
         });
@@ -36,7 +36,7 @@ describe('update', () => {
 
         let result;
         beforeEach(() => {
-            result = update(source, 'b.b1', newValue);
+            result = set(source, 'b.b1', newValue);
         });
 
         it('should update value considering dots as delimiter', () => {
@@ -62,7 +62,7 @@ describe('update', () => {
     it('should ignore empty path items', () => {
         const newValue = 6;
 
-        const result = update(source, 'b..b1', newValue);
+        const result = set(source, 'b..b1', newValue);
 
         expect(result.b.b1).to.be.equal(newValue);
     });
@@ -70,7 +70,7 @@ describe('update', () => {
     it('should create intermediate items if not exists', () => {
         const newValue = 6;
 
-        const result = update(source, 'c.c1', newValue);
+        const result = set(source, 'c.c1', newValue);
 
         expect(result.c.c1).to.be.equal(newValue);
     });
@@ -78,7 +78,7 @@ describe('update', () => {
     it('should create arrays item if not exists and addressed by index', () => {
         const newValue = 6;
 
-        const result = update(source, 'c.0', newValue);
+        const result = set(source, 'c.0', newValue);
 
         expect(result.c).to.be.an('array');
         expect(result.c[0]).to.be.equal(newValue);
