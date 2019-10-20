@@ -1,11 +1,9 @@
+const { isNumber } = require('../common');
+
 module.exports = update;
 
 function update(object, path, map) {
-    const pathArray = Array.isArray(path)
-        ? path
-        : path.split('.');
-
-    return doUpdate(object, pathArray, 0, map);
+    return doUpdate(object, path, 0, map);
 }
 
 function doUpdate(object, path, index, map) {
@@ -32,10 +30,6 @@ function doUpdate(object, path, index, map) {
 
 function createSource(key) {
     return isNumber(key) ? [] : {};
-}
-
-function isNumber(value) {
-    return !Number.isNaN(+value);
 }
 
 function setValue(source, key, value) {
