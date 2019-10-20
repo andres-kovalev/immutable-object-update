@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/andres-kovalev/immutable-object-update/compare/2.0.1...2.1.0) (2019-10-20)
+
+
+### Features
+
+* exported `update()` operation ([c8cc35e](https://github.com/andres-kovalev/immutable-object-update/commit/c8cc35eedb0b2f9cb493b659aafcab640878c4d8))
+* implemented `remove()` operation ([b72cf7d](https://github.com/andres-kovalev/immutable-object-update/commit/b72cf7d0d82c09fab8dad4a6f61ac980b25b1fa0))
+
+
+### Improvements
+
+* extracted `update()` function ([ccfd659](https://github.com/andres-kovalev/immutable-object-update/commit/ccfd659013af76427ee3ca83e81a9cd02665289f))
+
 ### [2.0.1](https://github.com/andres-kovalev/immutable-object-update/compare/2.0.0...2.0.1) (2019-10-20)
 
 
