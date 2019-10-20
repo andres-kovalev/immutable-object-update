@@ -1,4 +1,4 @@
-const set = require('../src/set');
+const { set } = require('../src');
 
 describe('set', () => {
     const source = {

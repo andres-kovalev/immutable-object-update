@@ -1,4 +1,4 @@
-const update = require('../src/update');
+const { update } = require('../src');
 
 const increment = oldValue => (oldValue || 0) + 1;
 
