@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/andres-kovalev/immutable-object-update/compare/2.0.0...2.0.1) (2019-10-20)
+
+
+### Bug Fixes
+
+* **ci:** fix publish flow ([807988c](https://github.com/andres-kovalev/immutable-object-update/commit/807988cd1ab5b1a26c112853753b74fd4d83eece))
+
 ## [2.0.0](https://github.com/andres-kovalev/immutable-object-update/compare/1.0.0...2.0.0) (2019-10-19)
 
 
