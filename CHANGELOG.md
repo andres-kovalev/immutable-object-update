@@ -13,6 +13,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 * re-implemented basic feature as a `set` operation ([315df41](https://github.com/andres-kovalev/immutable-object-update/commit/315df4143daa8a0909132e65433f4a49146d4188))
 
+## 1.0.0
+
 ### Features
 
 * implemented basic functionality ([0a81146](https://github.com/andres-kovalev/immutable-object-update/tree/0a81146cede53cfb79af995c37c690f5e26f6302))
