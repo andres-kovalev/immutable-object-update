@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>set(object, path, value) · GitBook</title>
+        <title>Operations · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../update/" />
+    <link rel="next" href="set/" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="../../" />
     
 
     </head>
@@ -104,9 +104,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="../">
+        <li class="chapter active" data-level="1.2" data-path="./">
             
-                <a href="../">
+                <a href="./">
             
                     
                     Operations
@@ -118,9 +118,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="./">
+        <li class="chapter " data-level="1.2.1" data-path="set/">
             
-                <a href="./">
+                <a href="set/">
             
                     
                     set(object, path, value)
@@ -131,9 +131,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../update/">
+        <li class="chapter " data-level="1.2.2" data-path="update/">
             
-                <a href="../update/">
+                <a href="update/">
             
                     
                     update(object, path, updater)
@@ -144,9 +144,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../remove/">
+        <li class="chapter " data-level="1.2.3" data-path="remove/">
             
-                <a href="../remove/">
+                <a href="remove/">
             
                     
                     remove(object, path)
@@ -162,7 +162,52 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../../CHANGELOG.html">
+        <li class="chapter " data-level="1.3" data-path="../functional/">
+            
+                <a href="../functional/">
+            
+                    
+                    Functions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../functional/apply/">
+            
+                <a href="../functional/apply/">
+            
+                    
+                    apply(value, ...ops)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../functional/pipe/">
+            
+                <a href="../functional/pipe/">
+            
+                    
+                    pipe(value, ...ops)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../CHANGELOG.html">
             
                 <a href="../../CHANGELOG.html">
             
@@ -205,7 +250,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >set(object, path, value)</a>
+        <a href="../.." >Operations</a>
     </h1>
 </div>
 
@@ -220,44 +265,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="setobject-path-value">set(object, path, value)</h1>
-<p><code>set()</code> function consumes 3 arguments:</p>
+                                <h1 id="operations">Operations</h1>
+<p>There are several available operations:</p>
 <ul>
-<li>object to update</li>
-<li>path to be updated (array of items or dot-separated string can be provided)</li>
-<li>value to set in specified path</li>
+<li><a href="set/">set(object, path, value)</a></li>
+<li><a href="update/">update(object, path, updater)</a></li>
+<li><a href="remove/">remove(object, path)</a></li>
 </ul>
-<pre><code class="lang-js"><span class="hljs-keyword">import</span> { set } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;immutable-object-update&apos;</span>;
-
-<span class="hljs-keyword">const</span> state = {
-    a: {
-        a1: <span class="hljs-number">1</span>,
-        a2: <span class="hljs-number">2</span>
-    },
-    b: {
-        b1: <span class="hljs-number">3</span>,
-        b2: <span class="hljs-number">4</span>
-    }
-};
-
-<span class="hljs-keyword">const</span> updated = set(state, [ <span class="hljs-string">&apos;b&apos;</span>, <span class="hljs-string">&apos;b1&apos;</span> ], <span class="hljs-number">5</span>);
-
-<span class="hljs-comment">// or</span>
-
-<span class="hljs-keyword">const</span> updated = set(state, <span class="hljs-string">&apos;b.b1&apos;</span>, <span class="hljs-number">5</span>);
-</code></pre>
-<p>As a result we will receive new object with structure below:</p>
-<pre><code class="lang-js">{
-    a: {
-        a1: <span class="hljs-number">1</span>,
-        a2: <span class="hljs-number">2</span>
-    },
-    b: {
-        b1: <span class="hljs-number">3</span>,
-        b2: <span class="hljs-number">5</span>
-    }
-}
-</code></pre>
 
                                 
                                 </section>
@@ -285,12 +299,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Operations">
+                <a href="../../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../update/" class="navigation navigation-next " aria-label="Next page: update(object, path, updater)">
+                <a href="set/" class="navigation navigation-next " aria-label="Next page: set(object, path, value)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -301,7 +315,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"set(object, path, value)","level":"1.2.1","depth":2,"next":{"title":"update(object, path, updater)","level":"1.2.2","depth":2,"path":"src/update/README.md","ref":"src/update/README.md","articles":[]},"previous":{"title":"Operations","level":"1.2","depth":1,"path":"src/README.md","ref":"src/README.md","articles":[{"title":"set(object, path, value)","level":"1.2.1","depth":2,"path":"src/set/README.md","ref":"src/set/README.md","articles":[]},{"title":"update(object, path, updater)","level":"1.2.2","depth":2,"path":"src/update/README.md","ref":"src/update/README.md","articles":[]},{"title":"remove(object, path)","level":"1.2.3","depth":2,"path":"src/remove/README.md","ref":"src/remove/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/set/README.md","mtime":"2019-10-20T21:05:27.360Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-20T21:05:56.435Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Operations","level":"1.2","depth":1,"next":{"title":"set(object, path, value)","level":"1.2.1","depth":2,"path":"src/operations/set/README.md","ref":"src/operations/set/README.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/operations/README.md","mtime":"2019-10-21T22:06:55.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-21T22:07:24.564Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
