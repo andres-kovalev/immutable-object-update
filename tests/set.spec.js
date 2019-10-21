@@ -92,4 +92,13 @@ describe('set', () => {
 
         expect(result.b.b1).to.be.equal(newValue);
     });
+
+    it('should return frozen object result', () => {
+        const newValue = 6;
+
+        const result = set(source, [ 'b', 'b1' ], newValue);
+
+        // eslint-disable-next-line no-unused-expressions
+        expect(result).to.be.frozen;
+    });
 });

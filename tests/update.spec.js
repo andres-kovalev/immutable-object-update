@@ -80,4 +80,11 @@ describe('update', () => {
 
         expect(result.b.b1).to.be.equal(4);
     });
+
+    it('should return frozen object result', () => {
+        const result = update(source, [ 'b', 'b1' ], increment);
+
+        // eslint-disable-next-line no-unused-expressions
+        expect(result).to.be.frozen;
+    });
 });
