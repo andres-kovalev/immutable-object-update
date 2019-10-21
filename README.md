@@ -168,6 +168,14 @@ const updated = set({}, 'a.0', 1);
 */
 ```
 
+To prevent further accidental mutation all operations returns frozen updated object.
+
+```js
+const updated = set(source, 'b.b1', 6);
+
+updated.b.b1 = 10;      // updated.b.b1 still has value of 6
+```
+
 ## Partial application
 
 All operations supports partial application - when object arguments is not provided, operation returns update function:
