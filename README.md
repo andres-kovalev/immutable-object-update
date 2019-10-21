@@ -167,3 +167,20 @@ const updated = set({}, 'a.0', 1);
 }
 */
 ```
+
+## Partial application
+
+All operations supports partial application - when object arguments is not provided, operation returns update function:
+
+```js
+const setB1to6 = set('b.b1', 6);
+
+const updated = setB1to6(state);  // equal to set(state, 'b.b1', 6);
+```
+
+When partial application is used, updated object should be passed last:
+
+```js
+const setB1 = set('b.b1');
+const setB1to6 = setB1(6);      // equal to set('b.b1', 6);
+```
