@@ -29,9 +29,9 @@ npm i -S immutable-object-update
 
 There are several operations provided by this package:
 
-* [set(object, path, value)](src/set/README.md)
-* [update(object, path, updater)](src/update/README.md)
-* [remove(object, path)](src/remove/README.md)
+* [set(object, path, value)](src/operations/set/README.md)
+* [update(object, path, updater)](src/operations/update/README.md)
+* [remove(object, path)](src/operations/remove/README.md)
 
 Most of operations consumes at least 2 arguments:
 
@@ -184,3 +184,8 @@ When partial application is used, updated object should be passed last:
 const setB1 = set('b.b1');
 const setB1to6 = setB1(6);      // equal to set('b.b1', 6);
 ```
+
+There are several helpful functions provided to make work with partially applied operations easier:
+
+* [apply(object, ...ops)](./src/functional/apply/README.md)
+* [pipe(object, ...ops)](./src/functional/pipe/README.md)
