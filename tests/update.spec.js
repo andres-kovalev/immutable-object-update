@@ -17,32 +17,26 @@ describe('update', () => {
 
     context('when array-type path provided', () => {
         it('should update value', () => {
-            const newValue = 4;
-
             const result = update(source, [ 'b', 'b1' ], increment);
 
-            expect(result.b.b1).to.be.equal(newValue);
+            expect(result.b.b1).to.be.equal(4);
         });
 
         it('should update value not considering dots as delimiter', () => {
-            const newValue = 6;
-
             const result = update(source, [ 'b.b1' ], increment);
 
-            expect(result['b.b1']).to.be.equal(newValue);
+            expect(result['b.b1']).to.be.equal(6);
         });
     });
 
     context('when string-type path provided', () => {
-        const newValue = 4;
-
         let result;
         beforeEach(() => {
             result = update(source, 'b.b1', increment);
         });
 
         it('should update value considering dots as delimiter', () => {
-            expect(result.b.b1).to.be.equal(newValue);
+            expect(result.b.b1).to.be.equal(4);
             expect(result['b.b1']).to.be.equal(source['b.b1']);
         });
 
@@ -62,27 +56,28 @@ describe('update', () => {
     });
 
     it('should ignore empty path items', () => {
-        const newValue = 4;
-
         const result = update(source, 'b..b1', increment);
 
-        expect(result.b.b1).to.be.equal(newValue);
+        expect(result.b.b1).to.be.equal(4);
     });
 
     it('should create intermediate items if not exists', () => {
-        const newValue = 1;
-
         const result = update(source, 'c.c1', increment);
 
-        expect(result.c.c1).to.be.equal(newValue);
+        expect(result.c.c1).to.be.equal(1);
     });
 
     it('should create arrays item if not exists and addressed by index', () => {
-        const newValue = 1;
-
         const result = update(source, 'c.0', increment);
 
         expect(result.c).to.be.an('array');
-        expect(result.c[0]).to.be.equal(newValue);
+        expect(result.c[0]).to.be.equal(1);
+    });
+
+    it('should support partial application', () => {
+        const setB1to6 = update([ 'b', 'b1' ], increment);
+        const result = setB1to6(source);
+
+        expect(result.b.b1).to.be.equal(4);
     });
 });
