@@ -184,3 +184,8 @@ When partial application is used, updated object should be passed last:
 const setB1 = set('b.b1');
 const setB1to6 = setB1(6);      // equal to set('b.b1', 6);
 ```
+
+There are several helpful functions provided to make work with partially applied operations easier:
+
+* [apply(object, ...ops)](./src/functional/apply/README.md)
+* [pipe(object, ...ops)](./src/functional/pipe/README.md)
