@@ -64,10 +64,7 @@ describe('remove', () => {
     it('should remove items from arrays correctly', () => {
         const result = remove(source, 'c.1');
 
-        expect(result.c).to.have.length(2);
-        expect(result.c).to.contain(1);
-        expect(result.c).to.not.contain(2);
-        expect(result.c).to.contain(3);
+        expect(result.c).to.eql([ 1, 3 ]);
     });
 
     it('should support partial application', () => {
