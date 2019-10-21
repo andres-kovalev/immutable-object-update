@@ -17,7 +17,7 @@ function mapValues(object, map) {
 
 function enhance(fn) {
     return specialCurry(
-        (...args) => preparePath(fn)(...args),
+        freezeResult(preparePath(fn)),
         fn.length
     );
 }
@@ -41,4 +41,8 @@ function specialCurry(fn, arity = fn.length) {
             arity - args.length
         );
     };
+}
+
+function freezeResult(fn) {
+    return (...args) => Object.freeze(fn(...args));
 }

@@ -74,4 +74,11 @@ describe('remove', () => {
         expect(result).to.have.property('b.b1');
         expect(result.b).to.not.have.property('b1');
     });
+
+    it('should return frozen object result', () => {
+        const result = remove(source, [ 'b', 'b1' ]);
+
+        // eslint-disable-next-line no-unused-expressions
+        expect(result).to.be.frozen;
+    });
 });
