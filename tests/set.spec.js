@@ -83,4 +83,13 @@ describe('set', () => {
         expect(result.c).to.be.an('array');
         expect(result.c[0]).to.be.equal(newValue);
     });
+
+    it('should support partial application', () => {
+        const newValue = 6;
+
+        const setB1to6 = set([ 'b', 'b1' ], newValue);
+        const result = setB1to6(source);
+
+        expect(result.b.b1).to.be.equal(newValue);
+    });
 });

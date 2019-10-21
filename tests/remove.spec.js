@@ -69,4 +69,12 @@ describe('remove', () => {
         expect(result.c).to.not.contain(2);
         expect(result.c).to.contain(3);
     });
+
+    it('should support partial application', () => {
+        const removeB1 = remove([ 'b', 'b1' ]);
+        const result = removeB1(source);
+
+        expect(result).to.have.property('b.b1');
+        expect(result.b).to.not.have.property('b1');
+    });
 });
