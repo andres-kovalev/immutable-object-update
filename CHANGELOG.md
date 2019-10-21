@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/andres-kovalev/immutable-object-update/compare/2.1.0...2.2.0) (2019-10-21)
+
+
+### Features
+
+* added functional helpers (`pipe()` and  `apply()`) ([9e8f36b](https://github.com/andres-kovalev/immutable-object-update/commit/9e8f36ba0a0ff1ad3d986c21c97f4946babfb17f))
+* added partial application support ([6807c8a](https://github.com/andres-kovalev/immutable-object-update/commit/6807c8a0e76742d32121e50b9a58c30a60209b75))
+* enhance operations to return frozen object ([5ae2547](https://github.com/andres-kovalev/immutable-object-update/commit/5ae25478ac19ce5dd10308a19e0016806366fdf2))
+
 ## [2.1.0](https://github.com/andres-kovalev/immutable-object-update/compare/2.0.1...2.1.0) (2019-10-20)
 
 
