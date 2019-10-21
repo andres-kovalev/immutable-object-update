@@ -1,9 +1,9 @@
-const update = require('./update');
-const set = require('./set');
-const remove = require('./remove');
+const operations = require('./operations');
+const functional = require('./functional');
 
 module.exports = {
-    ...mapValues({ update, set, remove }, enhance)
+    ...mapValues(operations, enhance),
+    ...functional
 };
 
 function mapValues(object, map) {

@@ -29,9 +29,9 @@ npm i -S immutable-object-update
 
 There are several operations provided by this package:
 
-* [set(object, path, value)](src/set/README.md)
-* [update(object, path, updater)](src/update/README.md)
-* [remove(object, path)](src/remove/README.md)
+* [set(object, path, value)](src/operations/set/README.md)
+* [update(object, path, updater)](src/operations/update/README.md)
+* [remove(object, path)](src/operations/remove/README.md)
 
 Most of operations consumes at least 2 arguments:
 
