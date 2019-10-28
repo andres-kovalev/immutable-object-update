@@ -81,4 +81,10 @@ describe('remove', () => {
         // eslint-disable-next-line no-unused-expressions
         expect(result).to.be.frozen;
     });
+
+    it('shouldn\'t create intermediate items if not exists', () => {
+        const result = remove(source, 'd.d1');
+
+        expect(result).to.not.have.property('d');
+    });
 });
