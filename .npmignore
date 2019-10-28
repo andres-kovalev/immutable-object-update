@@ -12,3 +12,4 @@ coverage
 package-lock.json
 coverage.lcov
 .temp
+*.hbs

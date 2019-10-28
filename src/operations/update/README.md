@@ -1,44 +1,17 @@
-# update(object, path, updater)
+<a name="update"></a>
 
-Sometimes we need to set new value depends on previous value. Here `update()` operation can help. It consumes 3 arguments:
+## update(object, path, update) ⇒ <code>Object</code> \| <code>Array.&lt;any&gt;</code>
+Sometimes we need to set new value depends on previous value.Here `update()` operation can help.
 
-- object to update
-- path to be updated (array of items or dot-separated string can be provided)
-- updater - function to update value on specified path
+**Returns**: <code>Object</code> \| <code>Array.&lt;any&gt;</code> - updated object  
+**Params**
 
-```js
-import { update } from 'immutable-object-update';
+- object <code>Object</code> | <code>Array.&lt;any&gt;</code> - object to update
+- path <code>string</code> | <code>Array.&lt;string&gt;</code> - path to be updated(array of items or dot-separated string can be provided)
+- update <code>function</code> - function to update value
 
-const state = {
-    a: {
-        a1: 1,
-        a2: 2
-    },
-    b: {
-        b1: 3,
-        b2: 4
-    }
-};
 
-const increment = oldValue => oldValue + 1;
-const updated = update(state, [ 'b', 'b1' ], increment);
 
-// or
+**Description**
 
-const updated = update(state, 'b.b1', increment);
-```
-
-As a result we will receive new object with structure below:
-
-```js
-{
-    a: {
-        a1: 1,
-        a2: 2
-    },
-    b: {
-        b1: 4,
-        b2: 5
-    }
-}
-```
+```jsimport { update } from 'immutable-object-update';const state = {    a: {        a1: 1,        a2: 2    },    b: {        b1: 3,        b2: 4    }};const increment = oldValue => oldValue + 1;const updated = update(state, [ 'b', 'b1' ], increment);// orconst updated = update(state, 'b.b1', increment);```As a result we will receive new object with structure below:```js{    a: {        a1: 1,        a2: 2    },    b: {        b1: 4,        b2: 5    }}```
