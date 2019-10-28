@@ -2,11 +2,12 @@
 
 * [Introduction](README.md)
 * [Operations](src/operations/README.md)
-    * [set(object, path, value)](src/operations/set/README.md)
-    * [update(object, path, updater)](src/operations/update/README.md)
     * [remove(object, path)](src/operations/remove/README.md)
+    * [set(object, path, value)](src/operations/set/README.md)
+    * [update(object, path, update)](src/operations/update/README.md)
 * [Functions](src/functional/README.md)
-    * [apply(value, ...ops)](src/functional/apply/README.md)
-    * [pipe(value, ...ops)](src/functional/pipe/README.md)
+    * [apply(object, ops)](src/functional/apply/README.md)
+    * [pipe(ops)](src/functional/pipe/README.md)
 * [Change Log](CHANGELOG.md)
+
 
