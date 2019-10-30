@@ -1,8 +1,8 @@
-#/bin/sh
+#!/bin/bash
 
 set -e
 
-sh ./tools/prepare-readme.sh
+bash ./tools/prepare-readme.sh
 
 if [[ `git status --porcelain` ]]; then
     git add -A .

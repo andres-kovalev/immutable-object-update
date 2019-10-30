@@ -12,10 +12,10 @@
         "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov -t $CODECOV_TOKEN",
         "precommit": "npm run lint",
         "prepush": "npm run lint && npm run cover && npm run cover:check",
-        "prepare:readme": "sh ./tools/prepare-readme.sh",
-        "check:readme": "sh ./tools/check-readme.sh",
+        "prepare:readme": "bash ./tools/prepare-readme.sh",
+        "check:readme": "bash ./tools/check-readme.sh",
         "build:docs": "gitbook build",
-        "publish:docs": "sh ./tools/publish-docs.sh . .temp",
+        "publish:docs": "bash ./tools/publish-docs.sh . .temp",
         "prepare:release": "standard-version -t ''",
         "prepare:package": "node ./tools/clean.js"
     },
