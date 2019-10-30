@@ -45,6 +45,8 @@ module.exports = remove;
  *     }
  * }
  * ```
+ *
+ * > Please note: `remove()` function won't return removed item
  */
 function remove(object, path) {
     const [ itemPath, valuePath ] = extractSubPath(path);
