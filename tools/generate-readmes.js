@@ -5,13 +5,16 @@ jsdoc2md.getTemplateDataSync({ files: './src/*/*/index.js' })
     .forEach(generateReadme);
 
 function generateReadme(meta) {
-    const { filename, path } = meta.meta;
-    const [ name ] = filename.split('.');
-    const mdName = name === 'index' ? 'README' : name;
+    const file = getMarkdownFileName(meta);
+    const markdown = generateReadmeMarkdown(meta);
 
+    writeFile(file, markdown);
+}
+
+function generateReadmeMarkdown(meta) {
     const { scope, customTags, ...data } = meta;
 
-    let md = jsdoc2md.renderSync({
+    const markdown = jsdoc2md.renderSync({
         data: [ data ],
         'param-list-format': 'list'
     });
@@ -21,8 +24,16 @@ function generateReadme(meta) {
             ({ tag }) => tag === 'docs'
         ) || {};
 
-        md = [ md, '**Description**', value ].join('\n\n');
+        return [ markdown, '**Description**', value ].join('\n\n');
     }
 
-    writeFile(`${ path }/${ mdName }.md`, md);
+    return markdown;
+}
+
+function getMarkdownFileName({ meta }) {
+    const { filename, path } = meta;
+    const [ name ] = filename.split('.');
+    const mdName = name === 'index' ? 'README' : name;
+
+    return `${ path }/${ mdName }.md`;
 }
