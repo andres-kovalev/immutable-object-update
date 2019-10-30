@@ -8,7 +8,14 @@ function generateReadme(meta) {
     const file = getMarkdownFileName(meta);
     const markdown = generateReadmeMarkdown(meta);
 
-    writeFile(file, markdown);
+    const normalizedMarkdown = markdown
+        .split('\n')
+        .map(
+            line => line.trimRight()
+        )
+        .join('\n');
+
+    writeFile(file, normalizedMarkdown);
 }
 
 function generateReadmeMarkdown(meta) {
