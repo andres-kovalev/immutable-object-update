@@ -10,6 +10,8 @@ const shift = require('./shift');
 const shiftN = require('./shiftN');
 const unshift = require('./unshift');
 const unshiftAll = require('./unshiftAll');
+const insert = require('./insert');
+const insertAll = require('./insertAll');
 
 module.exports = {
     update,
@@ -23,5 +25,7 @@ module.exports = {
     shift,
     shiftN,
     unshift,
-    unshiftAll
+    unshiftAll,
+    insert,
+    insertAll
 };
