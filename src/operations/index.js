@@ -13,6 +13,7 @@ const unshiftAll = require('./unshiftAll');
 const insert = require('./insert');
 const insertAll = require('./insertAll');
 const filter = require('./filter');
+const map = require('./map');
 
 module.exports = {
     update,
@@ -29,5 +30,6 @@ module.exports = {
     unshiftAll,
     insert,
     insertAll,
-    filter
+    filter,
+    map
 };
