@@ -1,7 +1,8 @@
 module.exports = {
     update,
     isNumber,
-    extractSubPath
+    extractSubPath,
+    updateArray
 };
 
 function update(object, path, map, shouldCreateIntermediate) {
@@ -68,4 +69,10 @@ function extractSubPath(path) {
         path.slice(0, -1),
         path[path.length - 1]
     ];
+}
+
+function updateArray(object, path, map) {
+    return update(object, path, item => (Array.isArray(item)
+        ? map(item)
+        : item));
 }
