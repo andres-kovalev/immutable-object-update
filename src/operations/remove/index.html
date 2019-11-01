@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../../functional/" />
+    <link rel="next" href="../removeN/" />
     
     
-    <link rel="prev" href="../update/" />
+    <link rel="prev" href="../reduce/" />
     
 
     </head>
@@ -118,7 +118,150 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../set/">
+        <li class="chapter " data-level="1.2.1" data-path="../filter/">
+            
+                <a href="../filter/">
+            
+                    
+                    filter(object, path, predicate)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../insert/">
+            
+                <a href="../insert/">
+            
+                    
+                    insert(object, path, value)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../insertAll/">
+            
+                <a href="../insertAll/">
+            
+                    
+                    insertAll(object, path, values)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../map/">
+            
+                <a href="../map/">
+            
+                    
+                    map(object, path, transform)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../pop/">
+            
+                <a href="../pop/">
+            
+                    
+                    pop(object, path)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../popN/">
+            
+                <a href="../popN/">
+            
+                    
+                    popN(object, path, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../push/">
+            
+                <a href="../push/">
+            
+                    
+                    push(object, path, value)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../pushAll/">
+            
+                <a href="../pushAll/">
+            
+                    
+                    pushAll(object, path, values)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../reduce/">
+            
+                <a href="../reduce/">
+            
+                    
+                    reduce(object, path, reducer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.10" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    remove(object, path)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../removeN/">
+            
+                <a href="../removeN/">
+            
+                    
+                    removeN(object, path, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../set/">
             
                 <a href="../set/">
             
@@ -131,12 +274,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../update/">
+        <li class="chapter " data-level="1.2.13" data-path="../shift/">
             
-                <a href="../update/">
+                <a href="../shift/">
             
                     
-                    update(object, path, updater)
+                    shift(object, path)
             
                 </a>
             
@@ -144,12 +287,51 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.3" data-path="./">
+        <li class="chapter " data-level="1.2.14" data-path="../shiftN/">
             
-                <a href="./">
+                <a href="../shiftN/">
             
                     
-                    remove(object, path)
+                    shiftN(object, path, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../unshift/">
+            
+                <a href="../unshift/">
+            
+                    
+                    unshift(object, path, value)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../unshiftAll/">
+            
+                <a href="../unshiftAll/">
+            
+                    
+                    unshiftAll(object, path, values)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../update/">
+            
+                <a href="../update/">
+            
+                    
+                    update(object, path, update)
             
                 </a>
             
@@ -181,7 +363,7 @@
                 <a href="../../functional/apply/">
             
                     
-                    apply(value, ...ops)
+                    apply(object, ops)
             
                 </a>
             
@@ -194,7 +376,7 @@
                 <a href="../../functional/pipe/">
             
                     
-                    pipe(value, ...ops)
+                    pipe(ops)
             
                 </a>
             
@@ -265,13 +447,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="removeobject-path">remove(object, path)</h1>
-<p><a href="../set/">set()</a> and <a href="../update/">update()</a> functions can help with new values, but it requires to many steps to remove items. Here <code>remove()</code> operation comes.</p>
-<p><code>remove()</code> function consumes 3 arguments:</p>
+                                <p><a name="remove"></a></p>
+<h2 id="removeobject-path-&#x21D2;-object--arrayany">remove(object, path) &#x21D2; <code>Object</code> | <code>Array.&lt;any&gt;</code></h2>
+<p><a href="../set/">set()</a> and <a href="../update/">update()</a> operations can help
+with new values, but it requires to many steps to remove items. Here <code>remove()</code> operation comes.</p>
+<p><strong>Returns</strong>: <code>Object</code> | <code>Array.&lt;any&gt;</code> - updated object
+<strong>Params</strong></p>
 <ul>
-<li>object to update</li>
-<li>path of item to be removed (array of items or dot-separated string can be provided)</li>
+<li>object <code>Object</code> | <code>Array.&lt;any&gt;</code> - object to update</li>
+<li>path <code>string</code> | <code>Array.&lt;string&gt;</code> - path to item to be removed
+(array of items or dot-separated string can be provided)</li>
 </ul>
+<p><strong>Description</strong></p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { remove } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;immutable-object-update&apos;</span>;
 
 <span class="hljs-keyword">const</span> state = {
@@ -302,6 +489,9 @@
     }
 }
 </code></pre>
+<blockquote>
+<p>Please note: <code>remove()</code> function won&apos;t return removed item</p>
+</blockquote>
 
                                 
                                 </section>
@@ -329,12 +519,12 @@
 
             
                 
-                <a href="../update/" class="navigation navigation-prev " aria-label="Previous page: update(object, path, updater)">
+                <a href="../reduce/" class="navigation navigation-prev " aria-label="Previous page: reduce(object, path, reducer)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../functional/" class="navigation navigation-next " aria-label="Next page: Functions">
+                <a href="../removeN/" class="navigation navigation-next " aria-label="Next page: removeN(object, path, n)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -345,7 +535,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"remove(object, path)","level":"1.2.3","depth":2,"next":{"title":"Functions","level":"1.3","depth":1,"path":"src/functional/README.md","ref":"src/functional/README.md","articles":[{"title":"apply(value, ...ops)","level":"1.3.1","depth":2,"path":"src/functional/apply/README.md","ref":"src/functional/apply/README.md","articles":[]},{"title":"pipe(value, ...ops)","level":"1.3.2","depth":2,"path":"src/functional/pipe/README.md","ref":"src/functional/pipe/README.md","articles":[]}]},"previous":{"title":"update(object, path, updater)","level":"1.2.2","depth":2,"path":"src/operations/update/README.md","ref":"src/operations/update/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/operations/remove/README.md","mtime":"2019-10-21T22:06:55.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-21T22:07:24.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"remove(object, path)","level":"1.2.10","depth":2,"next":{"title":"removeN(object, path, n)","level":"1.2.11","depth":2,"path":"src/operations/removeN/README.md","ref":"src/operations/removeN/README.md","articles":[]},"previous":{"title":"reduce(object, path, reducer)","level":"1.2.9","depth":2,"path":"src/operations/reduce/README.md","ref":"src/operations/reduce/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/operations/remove/README.md","mtime":"2019-11-01T14:30:06.330Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-01T14:30:50.082Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -368,10 +558,6 @@
     
         
         <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

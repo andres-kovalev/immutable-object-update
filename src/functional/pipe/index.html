@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>pipe(value, ...ops) · GitBook</title>
+        <title>pipe(ops) · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -118,7 +118,150 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../../operations/set/">
+        <li class="chapter " data-level="1.2.1" data-path="../../operations/filter/">
+            
+                <a href="../../operations/filter/">
+            
+                    
+                    filter(object, path, predicate)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../operations/insert/">
+            
+                <a href="../../operations/insert/">
+            
+                    
+                    insert(object, path, value)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../operations/insertAll/">
+            
+                <a href="../../operations/insertAll/">
+            
+                    
+                    insertAll(object, path, values)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../operations/map/">
+            
+                <a href="../../operations/map/">
+            
+                    
+                    map(object, path, transform)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../../operations/pop/">
+            
+                <a href="../../operations/pop/">
+            
+                    
+                    pop(object, path)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../../operations/popN/">
+            
+                <a href="../../operations/popN/">
+            
+                    
+                    popN(object, path, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../operations/push/">
+            
+                <a href="../../operations/push/">
+            
+                    
+                    push(object, path, value)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../operations/pushAll/">
+            
+                <a href="../../operations/pushAll/">
+            
+                    
+                    pushAll(object, path, values)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../operations/reduce/">
+            
+                <a href="../../operations/reduce/">
+            
+                    
+                    reduce(object, path, reducer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../../operations/remove/">
+            
+                <a href="../../operations/remove/">
+            
+                    
+                    remove(object, path)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../../operations/removeN/">
+            
+                <a href="../../operations/removeN/">
+            
+                    
+                    removeN(object, path, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../../operations/set/">
             
                 <a href="../../operations/set/">
             
@@ -131,12 +274,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../../operations/update/">
+        <li class="chapter " data-level="1.2.13" data-path="../../operations/shift/">
             
-                <a href="../../operations/update/">
+                <a href="../../operations/shift/">
             
                     
-                    update(object, path, updater)
+                    shift(object, path)
             
                 </a>
             
@@ -144,12 +287,51 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../../operations/remove/">
+        <li class="chapter " data-level="1.2.14" data-path="../../operations/shiftN/">
             
-                <a href="../../operations/remove/">
+                <a href="../../operations/shiftN/">
             
                     
-                    remove(object, path)
+                    shiftN(object, path, n)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../../operations/unshift/">
+            
+                <a href="../../operations/unshift/">
+            
+                    
+                    unshift(object, path, value)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../../operations/unshiftAll/">
+            
+                <a href="../../operations/unshiftAll/">
+            
+                    
+                    unshiftAll(object, path, values)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../../operations/update/">
+            
+                <a href="../../operations/update/">
+            
+                    
+                    update(object, path, update)
             
                 </a>
             
@@ -181,7 +363,7 @@
                 <a href="../apply/">
             
                     
-                    apply(value, ...ops)
+                    apply(object, ops)
             
                 </a>
             
@@ -194,7 +376,7 @@
                 <a href="./">
             
                     
-                    pipe(value, ...ops)
+                    pipe(ops)
             
                 </a>
             
@@ -250,7 +432,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >pipe(value, ...ops)</a>
+        <a href="../../.." >pipe(ops)</a>
     </h1>
 </div>
 
@@ -265,12 +447,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="pipeobject-ops">pipe(object, ...ops)</h1>
-<p><code>pipe()</code> combines several operations into single one to apply later:</p>
+                                <p><a name="pipe"></a></p>
+<h2 id="pipeops-&#x21D2;-function">pipe(...ops) &#x21D2; <code>function</code></h2>
+<p>Combines several operations into one (to upply later)</p>
+<p><strong>Returns</strong>: <code>function</code> - combined update operation
+<strong>Params</strong></p>
 <ul>
-<li>object to update</li>
-<li>ops to apply</li>
+<li>...ops <code>function</code> - operations to combine</li>
 </ul>
+<p><strong>Description</strong></p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { pipe, set } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;immutable-object-update&apos;</span>;
 
 <span class="hljs-keyword">const</span> state = {
@@ -330,7 +515,7 @@
 
             
                 
-                <a href="../apply/" class="navigation navigation-prev " aria-label="Previous page: apply(value, ...ops)">
+                <a href="../apply/" class="navigation navigation-prev " aria-label="Previous page: apply(object, ops)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -346,7 +531,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"pipe(value, ...ops)","level":"1.3.2","depth":2,"next":{"title":"Change Log","level":"1.4","depth":1,"path":"CHANGELOG.md","ref":"CHANGELOG.md","articles":[]},"previous":{"title":"apply(value, ...ops)","level":"1.3.1","depth":2,"path":"src/functional/apply/README.md","ref":"src/functional/apply/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/functional/pipe/README.md","mtime":"2019-10-21T22:06:55.926Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-21T22:07:24.564Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"pipe(ops)","level":"1.3.2","depth":2,"next":{"title":"Change Log","level":"1.4","depth":1,"path":"CHANGELOG.md","ref":"CHANGELOG.md","articles":[]},"previous":{"title":"apply(object, ops)","level":"1.3.1","depth":2,"path":"src/functional/apply/README.md","ref":"src/functional/apply/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/functional/pipe/README.md","mtime":"2019-11-01T14:30:06.330Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-01T14:30:50.082Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -369,10 +554,6 @@
     
         
         <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
