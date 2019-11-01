@@ -1,6 +1,6 @@
 {
     "name": "immutable-object-update",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "description": "Simple and fast immutable update utility",
     "main": "index.js",
     "scripts": {

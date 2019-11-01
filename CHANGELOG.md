@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/andres-kovalev/immutable-object-update/compare/2.2.0...2.3.0) (2019-11-01)
+
+
+### Features
+
+* added `filter()` operation ([215e322](https://github.com/andres-kovalev/immutable-object-update/commit/215e3225b8833e74b73b96c370df181b015a57c3))
+* added `insert()` and `insertAll()` operations ([819b9ca](https://github.com/andres-kovalev/immutable-object-update/commit/819b9cae32e0e64ecfd09aed409200ab7d074551))
+* added `map()` operation ([bb30de5](https://github.com/andres-kovalev/immutable-object-update/commit/bb30de57bce7e42ad6e080c492d53515ec37acd5))
+* added `pop()` and `popN()` operations ([b2b6a23](https://github.com/andres-kovalev/immutable-object-update/commit/b2b6a23fd7fd17169a65a8c23f2d68178cfe2cac))
+* added `push()` and `pushAll()` operations ([d7a527c](https://github.com/andres-kovalev/immutable-object-update/commit/d7a527c223ad944a562fac95eacafffe90ba6446))
+* added `reduce()` operation ([d4fe4bb](https://github.com/andres-kovalev/immutable-object-update/commit/d4fe4bbf167952c219c57561fd91caeaf77f7872))
+* added `removeN()` operation ([0dce914](https://github.com/andres-kovalev/immutable-object-update/commit/0dce9143e24f5b6ed9cd4abd9e964ed312a4942c))
+* added `shift()` and `shiftN()` operations ([e0ff8e6](https://github.com/andres-kovalev/immutable-object-update/commit/e0ff8e64f2633be64dcfda49e7b6650feae3dcbb))
+* added `unshift()` and `unshiftAll()` operations ([9c47290](https://github.com/andres-kovalev/immutable-object-update/commit/9c4729079b15a6f50b4d78090cf42d045b8758d3))
+
+
+### Bug Fixes
+
+* fixed `remove()` operation to not create intermediate items ([ad32ea5](https://github.com/andres-kovalev/immutable-object-update/commit/ad32ea5d31e1c2fbf36ac9129fd7f3c01cc2f790))
+* fixed README auto-generation ([437b628](https://github.com/andres-kovalev/immutable-object-update/commit/437b628785a8f51559e211ead0f18ae54f07aed4))
+
+
+### Improvements
+
+* refactored generate-readmes.js helper a bit ([7ada431](https://github.com/andres-kovalev/immutable-object-update/commit/7ada431658d6823c8a3b936a84a42cd00cf72cc1))
+
 ## [2.2.0](https://github.com/andres-kovalev/immutable-object-update/compare/2.1.0...2.2.0) (2019-10-21)
 
 
