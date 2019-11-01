@@ -7,5 +7,19 @@ const pop = require('./pop');
 const popN = require('./popN');
 const shift = require('./shift');
 const shiftN = require('./shiftN');
+const unshift = require('./unshift');
+const unshiftAll = require('./unshiftAll');
 
-module.exports = { update, set, remove, push, pushAll, pop, popN, shift, shiftN };
+module.exports = {
+    update,
+    set,
+    remove,
+    push,
+    pushAll,
+    pop,
+    popN,
+    shift,
+    shiftN,
+    unshift,
+    unshiftAll
+};
