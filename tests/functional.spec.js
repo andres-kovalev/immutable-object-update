@@ -23,7 +23,7 @@ describe('functional', () => {
             const value = [ [ 1, 2 ], [ 3, 4 ] ];
             const map = item => `value-${ item }`;
 
-            expect(flatMap(value, map)).to.eql([ 'value-1', 'value-2', 'value-3', 'value-4' ]);
+            expect(flatMap(value, map)).to.be.eql([ 'value-1', 'value-2', 'value-3', 'value-4' ]);
         });
     });
 });
