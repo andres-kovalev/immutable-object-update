@@ -25,9 +25,21 @@ function enhance(fn) {
 function preparePath(fn) {
     return (object, path, ...rest) => fn(
         object,
-        Array.isArray(path) ? path : path.split('.'),
+        parsePath(path),
         ...rest
     );
+}
+
+function parsePath(path) {
+    if (!path) {
+        return [];
+    }
+
+    if (Array.isArray(path)) {
+        return path;
+    }
+
+    return path.toString().split('.');
 }
 
 function specialCurry(fn, arity = fn.length) {
