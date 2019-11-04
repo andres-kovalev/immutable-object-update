@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.3.1](https://github.com/andres-kovalev/immutable-object-update/compare/2.3.0...2.3.1) (2019-11-04)
+
+
+### Bug Fixes
+
+* array item update by string index ([47da0df](https://github.com/andres-kovalev/immutable-object-update/commit/47da0df2eaad6073459cee42be9733a81d856991))
+* modified CI configuration for README check ([d62d5ae](https://github.com/andres-kovalev/immutable-object-update/commit/d62d5ae1846fed9b1fd1d520e301d517151173c4))
+* modified path conversion ([38e8116](https://github.com/andres-kovalev/immutable-object-update/commit/38e8116387e1a4cfc4a4d45c8d8c10d5a68e3a5c))
+
 ## [2.3.0](https://github.com/andres-kovalev/immutable-object-update/compare/2.2.0...2.3.0) (2019-11-01)
 
 
