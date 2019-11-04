@@ -51,7 +51,7 @@ function setValue(source, key, value) {
             .slice(0, key)
             .concat(
                 [ value ],
-                source.slice(key + 1)
+                source.slice(+key + 1)
             );
     }
 
