@@ -3,6 +3,7 @@
 There are several available operations:
 
 * [filter(object, path, predicate)](filter/README.md)
+* [get(object, path)](get/README.md)
 * [insert(object, path, value)](insert/README.md)
 * [insertAll(object, path, values)](insertAll/README.md)
 * [map(object, path, transform)](map/README.md)

@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Operations](src/operations/README.md)
     * [filter(object, path, predicate)](src/operations/filter/README.md)
+    * [get(object, path)](src/operations/get/README.md)
     * [insert(object, path, value)](src/operations/insert/README.md)
     * [insertAll(object, path, values)](src/operations/insertAll/README.md)
     * [map(object, path, transform)](src/operations/map/README.md)
