@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.0](https://github.com/andres-kovalev/immutable-object-update/compare/2.3.1...2.4.0) (2019-12-10)
+
+
+### Features
+
+* implemented `get()` helper ([6f59f4e](https://github.com/andres-kovalev/immutable-object-update/commit/6f59f4e9115c18b6f2aadb267bf57b3f19b164d3))
+
 ### [2.3.1](https://github.com/andres-kovalev/immutable-object-update/compare/2.3.0...2.3.1) (2019-11-04)
 
 
