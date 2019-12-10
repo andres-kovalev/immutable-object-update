@@ -15,6 +15,7 @@ const insertAll = require('./insertAll');
 const filter = require('./filter');
 const map = require('./map');
 const reduce = require('./reduce');
+const get = require('./get');
 
 module.exports = {
     update,
@@ -33,5 +34,6 @@ module.exports = {
     insertAll,
     filter,
     map,
-    reduce
+    reduce,
+    get
 };
