@@ -12,6 +12,7 @@
 Simple and fast immutable update utility.
 
 * full documentation can be found on [https://andres-kovalev.github.io/immutable-object-update/](https://andres-kovalev.github.io/immutable-object-update/)
+* playground with couple examples can be found [here](https://repl.it/@andreskovalev/immutable-object-update-playground)
 
 # Description
 
